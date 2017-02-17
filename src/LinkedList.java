@@ -16,9 +16,7 @@ public class LinkedList<Item extends Comparable<? super Item>> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-
-        LinkedList<Item> curr = next;
-
+        LinkedList<Item> curr = this;
         while (curr != null) {
             sb.append(curr.item).append(" => ");
             curr = curr.next;
