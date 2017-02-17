@@ -28,7 +28,6 @@ public class LinkedListRecursiveUtil {
 
 
         throw new NotImplementedException();
-
     }
 
 
@@ -45,7 +44,8 @@ public class LinkedListRecursiveUtil {
     /**
      * Create a new copy of a list and return the head of the copy
      */
-    public static <Item extends Comparable<? super Item>> LinkedList<Item> copy(LinkedList<Item> list) {
+    public static <Item extends Comparable<? super Item>> LinkedList<Item> copy(LinkedList<? extends Item> list) {
+
 
 
         throw new NotImplementedException();
@@ -69,10 +69,7 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> void removeFirst(LinkedList<? extends Item> list, Item needle) {
 
 
-
         throw new NotImplementedException();
-
-
     }
 
     /**
@@ -82,7 +79,6 @@ public class LinkedListRecursiveUtil {
 
 
         throw new NotImplementedException();
-
     }
 
     /**
