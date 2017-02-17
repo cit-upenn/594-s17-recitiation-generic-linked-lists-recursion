@@ -9,14 +9,7 @@ public class LinkedListRecursiveUtil {
      */
     public static <Item extends Comparable<? super Item>> int length(LinkedList<? extends Item> list) {
 
-        if (list == null)
-            return 0;
-        else
-            return 1 + length(list.next);
-
-        //        throw new UnsupportedOperationException("Implement and remove this");
-
-
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -25,14 +18,7 @@ public class LinkedListRecursiveUtil {
      */
     public static <Item extends Comparable<? super Item>> void print(LinkedList<? extends Item> list) {
 
-        if (list == null) {
-            return;
-        } else {
-            System.out.print(list.item + " ");
-            print(list.next);
-        }
-
-//        throw new UnsupportedOperationException("Implement and remove this");
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -43,11 +29,7 @@ public class LinkedListRecursiveUtil {
      */
     public static <Item extends Comparable<? super Item>> void printReverse(LinkedList<? extends Item> list) {
 
-            if (list != null) {
-                printReverse(list.next);
-                System.out.println(list.item + " ");
-            }
-//        throw new UnsupportedOperationException("Implement and remove this");
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
 
@@ -57,12 +39,7 @@ public class LinkedListRecursiveUtil {
      */
     public static <Item extends Comparable<? super Item>> LinkedList<Item> find(LinkedList<Item> list, Item needle) {
 
-        if (list == null || list.item == needle) {
-            return list;
-        } else {
-            return find(list.next, needle);
-        }
-//        throw new UnsupportedOperationException("Implement and remove this");
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -70,13 +47,7 @@ public class LinkedListRecursiveUtil {
      */
     public static <Item extends Comparable<? super Item>> LinkedList<Item> copy(LinkedList<? extends Item> list) {
 
-        if (list == null) {
-            return null;
-        } else {
-            return new LinkedList<>(list.item, copy(list.next));
-        }
-
-//        throw new UnsupportedOperationException("Implement and remove this");
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
 
@@ -86,13 +57,7 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> LinkedList<Item> append(LinkedList<Item> list, Item item) {
 
 
-        if (list == null) {
-            return new LinkedList<>(item, null);
-        } else {
-            list.next = append(list.next, item);
-            return list;
-        }
-
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
 
@@ -102,14 +67,7 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> LinkedList<Item> removeFirst(LinkedList<Item> list, Item
             needle) {
 
-        if (list != null) {
-            if (needle == list.item) {
-                list = list.next;
-            } else {
-                list.next = removeFirst(list.next, needle);
-            }
-        }
-        return list;
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -118,13 +76,7 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> LinkedList<Item> removeAll(LinkedList<Item> list, Item
             needle) {
 
-        if (list != null)
-            if (needle.equals(list.item))
-                list = removeAll(list.next, needle);
-            else
-                list.next = removeAll(list.next, needle);
-
-        return list;
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -148,7 +100,6 @@ public class LinkedListRecursiveUtil {
 
 
         throw new UnsupportedOperationException("Implement and remove this");
-
     }
 
 }
