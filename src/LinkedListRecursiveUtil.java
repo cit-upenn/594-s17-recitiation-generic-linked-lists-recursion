@@ -1,5 +1,3 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 /**
  * @author rtv
  */
@@ -15,7 +13,7 @@ public class LinkedListRecursiveUtil {
 
 
 
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -27,7 +25,8 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> void reverseToString(LinkedList<? extends Item> list) {
 
 
-        throw new NotImplementedException();
+
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
 
@@ -37,8 +36,7 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> boolean find(LinkedList<? extends Item> list, Item needle) {
 
 
-
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -48,7 +46,7 @@ public class LinkedListRecursiveUtil {
 
 
 
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
 
@@ -58,8 +56,8 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> void append(LinkedList<? extends Item> list, Item item) {
 
 
-        throw new NotImplementedException();
 
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
 
@@ -69,7 +67,7 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> void removeFirst(LinkedList<? extends Item> list, Item needle) {
 
 
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -78,7 +76,8 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> void removeAll(LinkedList<? extends Item> list, Item needle) {
 
 
-        throw new NotImplementedException();
+
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
     /**
@@ -89,7 +88,7 @@ public class LinkedListRecursiveUtil {
 
 
 
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Implement and remove this");
     }
 
 
@@ -105,7 +104,7 @@ public class LinkedListRecursiveUtil {
     public static <Item extends Comparable<? super Item>> void shuffle(LinkedList<? extends Item> listR) {
 
 
-        throw new NotImplementedException();
+        throw new UnsupportedOperationException("Implement and remove this");
 
     }
 
