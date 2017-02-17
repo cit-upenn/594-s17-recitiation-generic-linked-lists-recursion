@@ -1,7 +1,7 @@
-/**
+gkkl/**
  * @author rtv
  */
-public class LinkedListRecursiveUtil {
+public class LinkedListRecursiveFunctions {
 
 
     /**
@@ -82,7 +82,7 @@ public class LinkedListRecursiveUtil {
     /**
      * Returns the maximum item in the list or null if the list is empty
      */
-    public static <Item extends Comparable<? super Item>> Item max(LinkedList<? extends Item> list, Item maxSoFar) {
+    public static <Item extends Comparable<? super Item>> Item max(LinkedList<? extends Item> list) {
 
 
         throw new UnsupportedOperationException("Implement and remove this");
