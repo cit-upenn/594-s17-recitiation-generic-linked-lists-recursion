@@ -1,4 +1,4 @@
-gkkl/**
+/**
  * @author rtv
  */
 public class LinkedListRecursiveFunctions {
