@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 
 /**
  * @author rtv
@@ -118,15 +119,15 @@ public class LinkedListTest {
         assertFalse(head.next == copy.next);
         assertEquals(head.toString(), copy.toString());
 
-        copy.item = -100;
-        assertFalse(head.toString().equals(copy.toString()));
+        copy.item = 11;
+        assertNotEquals(head.toString(), copy.toString());
 
         LinkedList<Integer> l = new LinkedList<>();
         l.item = 14;
         l.next = null;
         LinkedListRecursiveUtil.copy(l);
-        copy = LinkedListRecursiveUtil.copy(head);
-        assertEquals(l.toString(), copy.toString());
+        copy = LinkedListRecursiveUtil.copy(l);
+        assertEquals("14 => null", copy.toString());
 
     }
 
