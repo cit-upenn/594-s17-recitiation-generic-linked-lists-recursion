@@ -18,78 +18,85 @@ public class LinkedListTest {
 
         head = new LinkedList<>();
         LinkedList<Integer> curr = head;
-
+        curr.item = 3;
         curr.next = new LinkedList<>();
-        curr.next.item = 3;
-        curr.next.next = null;
         curr = curr.next;
 
+        curr.item = 9;
         curr.next = new LinkedList<>();
-        curr.next.item = 9;
-        curr.next.next = null;
         curr = curr.next;
 
-
+        curr.item = 9;
         curr.next = new LinkedList<>();
-        curr.next.item = 9;
-        curr.next.next = null;
         curr = curr.next;
 
+        curr.item = 7;
         curr.next = new LinkedList<>();
-        curr.next.item = 7;
-        curr.next.next = null;
         curr = curr.next;
 
-        curr.next = new LinkedList<>();
-        curr.next.item = -10;
-        curr.next.next = null;
+        curr.item = -10;
+        curr.next = null;
+
     }
 
     @Test
     public void testPrint() throws Exception {
-        assertEquals("3 => 9 => 9 => 7 => -10 => null", head.toString());
+
+        LinkedListRecursiveUtil.print(head);
+
     }
 
     @Test
-    public void testValueOf() throws Exception {
-        assertEquals(head.toString(), LinkedListRecursiveUtil.valueOf(head));
+    public void testPrintReverse() throws Exception {
+
+        LinkedListRecursiveUtil.printReverse(head);
 
     }
+
+    @Test
+    public void testLength() throws Exception {
+        assertEquals(5, LinkedListRecursiveUtil.length(head));
+
+        assertEquals(1,LinkedListRecursiveUtil.length(new LinkedList<>()));
+
+        assertEquals(0, LinkedListRecursiveUtil.length(null));
+    }
+
 
     @Test
     public void testMax() throws Exception {
-        assertEquals(Integer.valueOf(9), LinkedListRecursiveUtil.max(head));
+        assertEquals(Integer.valueOf(9), LinkedListRecursiveUtil.max(head, head.item));
 
-        assertEquals(null, LinkedListRecursiveUtil.max(new LinkedList<>()));
+        assertEquals(null, LinkedListRecursiveUtil.max(new LinkedList<>(), null));
     }
 
     @Test
     public void testRemoveAll() throws Exception {
-        LinkedListRecursiveUtil.removeAll(head, 11);
+        head = LinkedListRecursiveUtil.removeAll(head, 11);
         assertEquals("3 => 9 => 9 => 7 => -10 => null", head.toString());
 
-        LinkedListRecursiveUtil.removeAll(head, -10);
+        head = LinkedListRecursiveUtil.removeAll(head, -10);
         assertEquals("3 => 9 => 9 => 7 => null", head.toString());
 
-        LinkedListRecursiveUtil.removeAll(head, 3);
+        head = LinkedListRecursiveUtil.removeAll(head, 3);
         assertEquals("9 => 9 => 7 => null", head.toString());
 
-        LinkedListRecursiveUtil.removeAll(head, 9);
+        head = LinkedListRecursiveUtil.removeAll(head, 9);
         assertEquals("7 => null", head.toString());
     }
 
     @Test
     public void testRemoveFirst() throws Exception {
-        LinkedListRecursiveUtil.removeFirst(head, 11);
+        head = LinkedListRecursiveUtil.removeFirst(head, 11);
         assertEquals("3 => 9 => 9 => 7 => -10 => null", head.toString());
 
-        LinkedListRecursiveUtil.removeFirst(head, 3);
+        head = LinkedListRecursiveUtil.removeFirst(head, 3);
         assertEquals("9 => 9 => 7 => -10 => null", head.toString());
 
-        LinkedListRecursiveUtil.removeFirst(head, 9);
+        head = LinkedListRecursiveUtil.removeFirst(head, 9);
         assertEquals("9 => 7 => -10 => null", head.toString());
 
-        LinkedListRecursiveUtil.removeFirst(head, 9);
+        head = LinkedListRecursiveUtil.removeFirst(head, 9);
         assertEquals("7 => -10 => null", head.toString());
     }
 
@@ -106,10 +113,10 @@ public class LinkedListTest {
         l.item = 14;
         l.next = null;
         LinkedListRecursiveUtil.append(l, 12);
-        assertEquals("14 => 12 => null", head.toString());
+        assertEquals("14 => 12 => null", l.toString());
 
-        LinkedListRecursiveUtil.append(null, 11);
-        assertEquals("11 => null", head.toString());
+        LinkedList<Integer> l1 = LinkedListRecursiveUtil.append(null, 11);
+        assertEquals("11 => null", l1.toString());
     }
 
     @Test
@@ -133,11 +140,14 @@ public class LinkedListTest {
 
     @Test
     public void testFind() throws Exception {
+        LinkedList<Integer> found = LinkedListRecursiveUtil.find(head, -10);
+        assertEquals(Integer.valueOf(-10), found.item);
 
-        assertEquals(true, LinkedListRecursiveUtil.find(head, -10));
-        assertEquals(true, LinkedListRecursiveUtil.find(head, 3));
-        assertEquals(false, LinkedListRecursiveUtil.find(head, 99));
+        found = LinkedListRecursiveUtil.find(head, 3);
+        assertEquals(Integer.valueOf(3), found.item);
 
+        found = LinkedListRecursiveUtil.find(head, -99);
+        assertEquals(null, found);
     }
 
 }
